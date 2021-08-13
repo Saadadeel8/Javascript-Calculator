@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> A Calculator </title>
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+<form name="calculator">
+
+<table>
+<tr>
+         <td colspan="4">
+            <input type="text" name="display" id="display" disabled>
+           
+         </td>
+      </tr>
+<tr> <td><input type="button" id="clear" name="clear" value="C" onclick="reset();"></td> 
+<td> <input type="button" id="remove" class= "operator" name="backspace" value="<=" onclick="document.calculator.display.value = document.calculator.display.value.slice(0, document.calculator.display.value.length -1)"> </td> </td> </tr>
+<tr> <td> <input type="button" class="numbers" name="one" value="1" onclick="update(1)"> </td>
+<td> <input type="button" class="numbers" name="two" value="2" onclick="update(2)"> </td>
+<td> <input type="button" class="numbers" name="three" value="3" onclick="update(3)"> </td>
+<td> <input type="button" name="plus" class= "operator" value="+" onclick="update('+')"> </td> </tr>
+<tr> <td> <input type="button" class="numbers" name="four" value="4" onclick="update(4)"> </td>
+<td> <input type="button" class="numbers" name="five" value="5" onclick="update(5)"> </td>
+<td> <input type="button" class="numbers" name="six" value="6" onclick="update(6)"> </td>
+<td> <input type="button" name="minus" class= "operator" value="-" onclick="update('-')"> </td></tr>
+<tr> <td> <input type="button" class="numbers" name="seven" value="7" onclick="update(7)"> </td>
+<td> <input type="button" class="numbers" name="eight" value="8" onclick="update(8)"> </td>
+<td> <input type="button" class="numbers" name="nine" value="9" onclick="update(9)"> </td> 
+<td> <input type="button" name="multiply" class= "operator" value="*" onclick="update('*')"> </td></tr>
+<tr> <td> <input type="button" name="decimal" class= "operator" value="." onclick="update('.')"> </td>
+<td> <input type="button" class="numbers" name="zero" value="0" onclick="update(0)"> </td>
+ <td> <input type="button" class= "operator" name="equal" value="=" onclick="result(value);"> </td> 
+ <td> <input type="button"  name="divide" class= "operator" value="/" onclick="update('/')"> </td></tr>
+
+
+</table>
+
+</form>
+<script src="script.js"></script>
+</body>
+
+</html>
